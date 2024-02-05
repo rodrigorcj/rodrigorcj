@@ -1,0 +1,19 @@
+l = [7,1,10,42,1,1,30,1,25,16,8,1,5]
+N = len(l)
+cont = 0
+aux = 0
+maior = 0
+
+for i in range(N):
+    if (l[i] == 1 and aux == 0):
+        aux = 1
+
+    elif (l[i] != 1 and aux == 1):
+        cont = cont +1
+
+    elif (l[i] == 1 and aux == 1):
+        if cont > maior:
+            maior = cont
+        cont = 0
+
+print ('maior distancia entre dois 1 é ', maior)
